@@ -1,0 +1,62 @@
+{% extends "layouts/layout.html" %} {% block content %}
+
+<style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("{{ url_for('static', filename='img/bg/capsule-in-space.jpg') }}") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    filter: brightness(0.3);
+    transform: scaleX(-1);
+    z-index: -1;
+  }
+</style>
+
+<div id="background"></div>
+
+<section>
+  <div class="container">
+    <h1 class="display-1">spaceship</h1>
+
+    <h2>vehicle</h2>
+    <p>
+      The spaceship is a 292-foot-long vessel that is designed to take you on a 6-hour flight. It is equipped with two
+      360 degrees rotating stern thrusters for precise mobility and dynamic positioning. The spaceship is designed to
+      have a low G force and give you the feel of an astronaut and a view of the world.
+    </p>
+    <p>
+      It features a lot of glass for viewing and a shape designed for a smooth landing in the ocean or other bodies of
+      water, which can accommodate eight passengers.
+    </p>
+
+    <h2>safety</h2>
+    <p>
+      Test flights are beginning soon this year to verify that we are ready to go commercial. Communications throughout
+      the operation – between land, sea, and capsule – will be provided by Silvus Technologies, utilizing military-grade
+      StreamCaster MANET radios and MN-MIMO waveform technology. To provide comfort and decrease the chance of health
+      issues on the flight, the vessel will be pressurized.
+    </p>
+
+    <h2>launch</h2>
+    <p>
+      We do our best to create ideal launch conditions making flights as frequent as possible. We constantly plan to
+      move to areas of good weather and follow the sea breeze to minimize the impact of wind and minimize the likelihood
+      of complications.
+    </p>
+
+    <h2>recovery</h2>
+    <p>
+      The cone shape at the bottom of the vessel will provide flyers with a smooth landing in the water. Fast boats from
+      Fluid Watercraft will stabilize the capsule after it lands in the water so that the Marine Spaceport can lift it
+      from the water and take it back to a launch site.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

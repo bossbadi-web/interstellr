@@ -1,0 +1,118 @@
+{% extends "layouts/layout.html" %} {% block content %}
+
+<style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("{{ url_for('static', filename='img/training/training.jpg') }}") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    filter: brightness(0.3);
+    transform: scaleX(-1);
+    z-index: -1;
+  }
+
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  .bgimg-1 {
+    background-image: url("{{ url_for('static', filename='img/training/mockup.jpg') }}");
+  }
+
+  .bgimg-2 {
+    background-image: url("{{ url_for('static', filename='img/training/pool.jpg') }}");
+  }
+
+  .bgimg-3 {
+    background-image: url("{{ url_for('static', filename='img/training/treadmill.jpg') }}");
+  }
+
+  .main-text {
+    height: 100vh;
+    padding-top: 3em;
+  }
+
+  section {
+    margin: 0;
+    padding: 0;
+    border-style: none none solid none;
+    border-width: 10px;
+    border-color: var(--cool-blue);
+  }
+
+  .caption {
+    top: 0;
+    margin: 0;
+    padding: 4em 2em;
+    background-color: var(--cooler-blue);
+  }
+
+  .footer {
+    background-color: var(--cool-blue);
+  }
+</style>
+
+<div id="background"></div>
+
+<section class="main-text">
+  <div class="container mobile-center">
+    <h1 class="display-1">training</h1>
+    <p class="subheader">What is the training process for astronauts?</p>
+  </div>
+</section>
+
+<section class="caption">
+  <div class="container">
+    Astronauts practice in life-sized models, called Space Vehicle Mock-up Facility. This way, they can learn how to
+    move about in the facility.
+  </div>
+</section>
+
+<section class="bgimg-1"></section>
+
+<section class="caption">
+  <div class="container">
+    <p>There are many different ways to train for microgravity:</p>
+    <ul>
+      <li>
+        There is a plane called KC-135, which is one way they experience microgravity. They fly the plane all the way
+        into the air and quickly nosedive, providing a microgravity environment.
+      </li>
+      <li>
+        There is a "Precision Air-Bearing Floor," which allows astronauts to experience moving heavy objects as if they
+        are in space, where there is no friction present.
+      </li>
+      <li>
+        To practice leaving the space shuttle to make repairs to the ship, astronauts go underwater. Since water’s
+        gravitational level is lower than normal, it is a perfect place to practice. Furthermore, astronauts could
+        practice in the Neutral Buoyancy Laboratory Pool, where they can insert panels simulating the outside of space.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="bgimg-2"></section>
+
+<section class="caption">
+  <div class="container">
+    People need to be physically fit to be an astronaut. In space, it may be hard to stay fit. Fortunately, there are
+    specialized treadmills in the space station.
+  </div>
+</section>
+
+<section class="bgimg-3"></section>
+
+{% endblock %}

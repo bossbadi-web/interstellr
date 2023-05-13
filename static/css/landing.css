@@ -1,0 +1,79 @@
+/* center text in middle of div */
+.text-wrapper {
+  margin: auto;
+  width: 50%;
+}
+.text-wrapper p {
+  padding: 1em;
+  text-shadow: black 0 0 5px;
+  font-weight: 600;
+}
+
+b {
+  color: yellow;
+}
+
+.img-wrapper {
+  margin: auto;
+  width: 50%;
+}
+.img-wrapper img {
+  float: right;
+  min-width: 100px !important;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+}
+
+.promo-container {
+  backdrop-filter: brightness(1.7);
+  padding: 2em 1em;
+  border-radius: 50%;
+}
+
+.contact-section {
+  background-color: var(--cooler-blue);
+  -webkit-clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+  margin-bottom: 0;
+
+  /* stick to bottom of page */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 0;
+}
+.contact-section .container {
+  color: var(--cool-gray);
+  padding-top: 6em;
+  padding-bottom: 8em;
+}
+
+input,
+textarea,
+select {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  color: white !important;
+  caret-color: white !important;
+  border-style: none !important;
+}
+
+.footer {
+  background-color: var(--cool-blue);
+}
+
+@media only screen and (max-width: 574px) {
+  .contact-section {
+    -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .contact-section .container {
+    padding-top: 3em;
+    padding-bottom: 9em;
+  }
+
+  .text-wrapper p {
+    padding: 0;
+    font-size: 0.8em;
+  }
+}

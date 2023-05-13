@@ -1,0 +1,256 @@
+{% extends "layouts/layout.html" %} {% block content %}
+
+<style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("{{ url_for('static', filename='img/bg/northern-lights.jpg') }}") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    filter: brightness(0.3);
+    transform: scaleX(-1);
+    z-index: -1;
+  }
+
+  input,
+  textarea,
+  select {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    color: white !important;
+    caret-color: white !important;
+    border-style: none !important;
+  }
+</style>
+
+<div id="background"></div>
+
+<section>
+  <div class="container">
+    <h1 class="display-1">register</h1>
+    <p>The price of a flight is $125,000 per person.</p>
+
+    <form class="row g-3 m-2">
+      <h2>registrant information</h2>
+      <div class="col-md-6">
+        <label for="inputFName" class="form-label">first name</label>
+        <input type="text" class="form-control" required />
+      </div>
+      <div class="col-md-6">
+        <label for="inputLName" class="form-label">last name</label>
+        <input type="text" class="form-control" required />
+      </div>
+      <div class="col-12">
+        <label for="inputEmail4" class="form-label">email</label>
+        <input type="email" class="form-control" required />
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">address</label>
+        <input type="text" class="form-control" placeholder="123 Sesame St" required />
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">address 2</label>
+        <input type="text" class="form-control" placeholder="apartment, studio, or floor" />
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">city</label>
+        <input type="text" class="form-control" required />
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">state</label>
+        <select class="form-select" required="">
+          <option selected=""></option>
+          <option value="AK">Alaska (AK)</option>
+          <option value="AL">Alabama (AL)</option>
+          <option value="AR">Arkansas (AR)</option>
+          <option value="AS">American Samoa (AS)</option>
+          <option value="AZ">Arizona (AZ)</option>
+          <option value="CA">California (CA)</option>
+          <option value="CO">Colorado (CO)</option>
+          <option value="CT">Connecticut (CT)</option>
+          <option value="DC">District Of Columbia (DC)</option>
+          <option value="DE">Delaware (DE)</option>
+          <option value="FL">Florida (FL)</option>
+          <option value="GA">Georgia (GA)</option>
+          <option value="GU">Guam (GU)</option>
+          <option value="HI">Hawaii (HI)</option>
+          <option value="IA">Iowa (IA)</option>
+          <option value="ID">Idaho (ID)</option>
+          <option value="IL">Illinois (IL)</option>
+          <option value="IN">Indiana (IN)</option>
+          <option value="KS">Kansas (KS)</option>
+          <option value="KY">Kentucky (KY)</option>
+          <option value="LA">Louisiana (LA)</option>
+          <option value="MA">Massachusetts (MA)</option>
+          <option value="MD">Maryland (MD)</option>
+          <option value="ME">Maine (ME)</option>
+          <option value="MI">Michigan (MI)</option>
+          <option value="MN">Minnesota (MN)</option>
+          <option value="MO">Missouri (MO)</option>
+          <option value="MP">Northern Mariana Islands (MP)</option>
+          <option value="MS">Mississippi (MS)</option>
+          <option value="MT">Montana (MT)</option>
+          <option value="NC">North Carolina (NC)</option>
+          <option value="ND">North Dakota (ND)</option>
+          <option value="NE">Nebraska (NE)</option>
+          <option value="NH">New Hampshire (NH)</option>
+          <option value="NJ">New Jersey (NJ)</option>
+          <option value="NM">New Mexico (NM)</option>
+          <option value="NV">Nevada (NV)</option>
+          <option value="NY">New York (NY)</option>
+          <option value="OH">Ohio (OH)</option>
+          <option value="OK">Oklahoma (OK)</option>
+          <option value="OR">Oregon (OR)</option>
+          <option value="PA">Pennsylvania (PA)</option>
+          <option value="PR">Puerto Rico (PR)</option>
+          <option value="RI">Rhode Island (RI)</option>
+          <option value="SC">South Carolina (SC)</option>
+          <option value="SD">South Dakota (SD)</option>
+          <option value="TN">Tennessee (TN)</option>
+          <option value="TX">Texas (TX)</option>
+          <option value="UM">United States Minor Outlying Islands (UM)</option>
+          <option value="UT">Utah (UT)</option>
+          <option value="VA">Virginia</option>
+          <option value="VI">Virgin Islands (VI)</option>
+          <option value="VT">Vermont</option>
+          <option value="WA">Washington</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WV">West Virginia</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">zip</label>
+        <input type="text" class="form-control" required />
+      </div>
+
+      <div class="mb-3"></div>
+
+      <h2>billing information</h2>
+      <div class="dropdown-divider"></div>
+      <div class="col-md-6">
+        <label for="billName" class="form-label">name of cardholder</label>
+        <input type="fName" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label for="cardNum" class="form-label">card number</label>
+        <input type="card-number" class="form-control" />
+      </div>
+      <div class="col-md-4">
+        <label for="inputCardType" class="form-label">card issuer</label>
+        <select class="form-select" required="">
+          <option selected=""></option>
+          <option>American Express</option>
+          <option>Bank of America</option>
+          <option>Capital One</option>
+          <option>Capital One</option>
+          <option>Chase</option>
+          <option>Citi</option>
+          <option>Discover</option>
+          <option>MasterCard</option>
+          <option>Visa</option>
+          <option>Wells Fargo</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label for="expDate" class="form-label">expiration date</label>
+        <input type="expiration" class="form-control" placeholder="mm/dd/yyyy" />
+      </div>
+      <div class="col-md-4">
+        <label for="secCode" class="form-label">cvc</label>
+        <input type="securityCode" class="form-control" />
+      </div>
+
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">billing address</label>
+        <input type="text" class="form-control" placeholder="123 Sesame St" required />
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">billing address 2</label>
+        <input type="text" class="form-control" placeholder="Apartment, studio, or floor" />
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">city</label>
+        <input type="text" class="form-control" required />
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">state</label>
+        <select class="form-select" required="">
+          <option selected=""></option>
+          <option value="AK">Alaska (AK)</option>
+          <option value="AL">Alabama (AL)</option>
+          <option value="AR">Arkansas (AR)</option>
+          <option value="AS">American Samoa (AS)</option>
+          <option value="AZ">Arizona (AZ)</option>
+          <option value="CA">California (CA)</option>
+          <option value="CO">Colorado (CO)</option>
+          <option value="CT">Connecticut (CT)</option>
+          <option value="DC">District Of Columbia (DC)</option>
+          <option value="DE">Delaware (DE)</option>
+          <option value="FL">Florida (FL)</option>
+          <option value="GA">Georgia (GA)</option>
+          <option value="GU">Guam (GU)</option>
+          <option value="HI">Hawaii (HI)</option>
+          <option value="IA">Iowa (IA)</option>
+          <option value="ID">Idaho (ID)</option>
+          <option value="IL">Illinois (IL)</option>
+          <option value="IN">Indiana (IN)</option>
+          <option value="KS">Kansas (KS)</option>
+          <option value="KY">Kentucky (KY)</option>
+          <option value="LA">Louisiana (LA)</option>
+          <option value="MA">Massachusetts (MA)</option>
+          <option value="MD">Maryland (MD)</option>
+          <option value="ME">Maine (ME)</option>
+          <option value="MI">Michigan (MI)</option>
+          <option value="MN">Minnesota (MN)</option>
+          <option value="MO">Missouri (MO)</option>
+          <option value="MP">Northern Mariana Islands (MP)</option>
+          <option value="MS">Mississippi (MS)</option>
+          <option value="MT">Montana (MT)</option>
+          <option value="NC">North Carolina (NC)</option>
+          <option value="ND">North Dakota (ND)</option>
+          <option value="NE">Nebraska (NE)</option>
+          <option value="NH">New Hampshire (NH)</option>
+          <option value="NJ">New Jersey (NJ)</option>
+          <option value="NM">New Mexico (NM)</option>
+          <option value="NV">Nevada (NV)</option>
+          <option value="NY">New York (NY)</option>
+          <option value="OH">Ohio (OH)</option>
+          <option value="OK">Oklahoma (OK)</option>
+          <option value="OR">Oregon (OR)</option>
+          <option value="PA">Pennsylvania (PA)</option>
+          <option value="PR">Puerto Rico (PR)</option>
+          <option value="RI">Rhode Island (RI)</option>
+          <option value="SC">South Carolina (SC)</option>
+          <option value="SD">South Dakota (SD)</option>
+          <option value="TN">Tennessee (TN)</option>
+          <option value="TX">Texas (TX)</option>
+          <option value="UM">United States Minor Outlying Islands (UM)</option>
+          <option value="UT">Utah (UT)</option>
+          <option value="VA">Virginia</option>
+          <option value="VI">Virgin Islands (VI)</option>
+          <option value="VT">Vermont</option>
+          <option value="WA">Washington</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WV">West Virginia</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">zip</label>
+        <input type="text" class="form-control" required />
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-primary btn-lg">submit order</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300&display=swap");
+@import url("colors.css");
+
+/* remove scrollbar on page */
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* change navbar transparency on scroll */
+html:not([data-scroll="0"]) .navbar {
+  transition: 0.5s;
+  background-color: var(--cool-blue);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+html[data-scroll="0"] .navbar {
+  transition: 1s;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* properly place footer */
+body {
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+}
+body::after {
+  content: "";
+  display: block;
+  height: 3em;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 0;
+}
+.footer .container {
+  color: var(--cool-gray);
+  text-align: center;
+  padding: 1em 1em;
+}
+
+body {
+  background-color: var(--cooler-blue);
+  font-family: "Oxanium", arial;
+  font-size: 14pt;
+  word-wrap: break-word;
+  color: white;
+}
+
+section {
+  margin: 1em 0;
+  padding: 2em 0;
+}
+
+h1 {
+  color: yellow;
+  letter-spacing: 0.05em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.subheader {
+  color: var(--cool-gray);
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: -2em;
+}
+
+/* remove bullet points on lists */
+.no-bullets {
+  list-style: none;
+  padding-left: 1em;
+}
+
+/* ol with numbers in superscript */
+ol.super {
+  counter-reset: item;
+  padding: 0;
+  list-style: none;
+}
+
+.super li:before {
+  content: counter(item);
+  counter-increment: item;
+  position: absolute;
+  vertical-align: super;
+  font-size: x-small;
+  left: 1em;
+  color: var(--cool-gray);
+}
+
+.super li {
+  position: relative;
+  display: block;
+  padding: 0em 0em 0em 1em;
+}
+
+/* center text on mobile */
+@media only screen and (max-width: 574px) {
+  h1 {
+    text-align: center;
+  }
+
+  .mobile-center {
+    text-align: center;
+  }
+
+  .container {
+    padding: 0 1em;
+  }
+}

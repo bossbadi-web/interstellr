@@ -1,0 +1,155 @@
+{% extends "layouts/layout.html" %} {% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/earth.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/parallelogram.css') }}" />
+
+<style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("{{ url_for('static', filename='img/bg/capsule-earth-bg.jpg') }}") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    filter: brightness(var(--brightness));
+    transform: scaleX(-1);
+    z-index: -1;
+  }
+</style>
+
+<div id="background">
+  <div id="particles-js"></div>
+  <script src="{{ url_for('static', filename='particles/particles.js') }}"></script>
+  <script src="{{ url_for('static', filename='particles/app.js') }}"></script>
+</div>
+
+<section>
+  <div class="container mobile-center">
+    <div class="d-flex flex-lg-row flex-column">
+      <div class="flex-grow-1 p-4">
+        <h1 class="display-1">interstellr</h1>
+        <p class="subheader"><i>exploring the vastness of space, one mission at a time</i></p>
+      </div>
+      <div class="p-4">
+        <div class="earth"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="parallelogram">
+    <div class="container quote-container">
+      <blockquote class="blockquote">
+        <p>
+          “We always imagined offering the opportunity to view the most incredible natural phenomena from space,
+          including the Northern Lights, the boot of Italy, the sheer scale of the Nile Delta, and the deep blue seas
+          around the Bahamas”
+        </p>
+        <footer class="blockquote-footer">Founder and co-CEO of Space Perspective</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container promo-container">
+    <div class="d-flex flex-row">
+      <div class="p-2 text-wrapper">
+        <p>
+          <b>Incredibly environmental.</b> We strive to reduce our carbon footprint in multiple ways including our use
+          of biofuel.
+        </p>
+      </div>
+
+      <div class="p-2 img-wrapper">
+        <img class="img-fluid" src="{{ url_for('static', filename='img/landing/biofuel.jpg') }}" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container promo-container">
+    <div class="d-flex flex-row">
+      <div class="p-2 img-wrapper">
+        <img
+          class="img-fluid"
+          src="{{ url_for('static', filename='img/landing/window-earth.jpg') }}"
+          style="float: left"
+        />
+      </div>
+
+      <div class="p-2 text-wrapper">
+        <p>
+          <b>Immaculate impressions.</b> With giant windows making up most of the vessel, enjoy being able to see 450
+          miles in any direction you look.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container promo-container">
+    <div class="d-flex flex-row">
+      <div class="p-2 text-wrapper">
+        <p>
+          <b>Idiosyncratic experience.</b> We have space travel as never seen before with an ultra-comfortable,
+          accessible, and gentle (low G force) six hour journey.
+        </p>
+      </div>
+
+      <div class="p-2 img-wrapper">
+        <img class="img-fluid" src="{{ url_for('static', filename='img/landing/commercial.webp') }}" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container promo-container">
+    <div class="d-flex flex-row">
+      <div class="p-2 img-wrapper">
+        <img class="img-fluid" src="{{ url_for('static', filename='img/landing/sales.png') }}" style="float: left" />
+      </div>
+      <div class="p-2 text-wrapper">
+        <p>
+          <b>Impactful integers.</b> We have already made over a thousand sales and are looking at commercial flights
+          happening as soon as late 2024.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spacer"></section>
+
+<section class="contact-section">
+  <div class="container mobile-center">
+    <h2>let's get in touch</h2>
+    <p>Join our mailing list to stay up to date on the latest news and announcements.</p>
+    <form class="row">
+      <div class="col-12">
+        <div class="input-group">
+          <input type="email" class="form-control" id="email" placeholder="email" required />
+          <button class="btn btn-primary" type="submit">subscribe</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+  // make spacer the same height as contact section
+  const contactSection = document.querySelector(".contact-section");
+  const spacer = document.querySelector(".spacer");
+  spacer.style.height = contactSection.offsetHeight + "px";
+</script>
+
+{% endblock %}

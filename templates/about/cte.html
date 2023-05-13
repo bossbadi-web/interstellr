@@ -1,0 +1,422 @@
+{% extends "layouts/layout.html" %} {% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/parallelogram.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/slideshow.css') }}" />
+
+<style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("{{ url_for('static', filename='img/bg/cvhs.jpg') }}") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    filter: brightness(0.3);
+    z-index: -1;
+  }
+
+  .slide-column {
+    width: calc(100% / 5);
+  }
+
+  .blockquote p {
+    text-align: center;
+  }
+
+  .card {
+    background-color: var(--cooler-blue);
+    margin-bottom: 0.5em;
+  }
+
+  .card p {
+    margin-bottom: 0;
+    font-size: 12pt;
+  }
+
+  .btn-lg {
+    width: 100%;
+    text-align: left !important;
+  }
+
+  .social-btn {
+    margin-bottom: 0.3em;
+  }
+
+  .btn img {
+    height: 2em;
+  }
+</style>
+
+<div id="background"></div>
+
+<section>
+  <div class="container">
+    <h1 class="display-1">career & technical education</h1>
+    <p>
+      Cumberland Valley high school has a large variety of career pathways available for students to choose or students
+      can create their own pathway following a set of guidelines. There are pathways available in agriculture, art,
+      business, Family and Consumer Sciences, Music, STEM, and more. Technical education in Cumberland Valley is also
+      offered at a vocational tech school where computer programming, construction, technology and logistics, machine
+      technology and computer networking are taught. At Cumberland Valley high school, classes also include hands-on
+      approach to learning and offer a wide variety from traditional classes to independent studies.
+    </p>
+
+    <h2>quick links</h2>
+    <a class="btn btn-secondary social-btn" target="_blank" href="https://www.cvschools.org">
+      <img src="{{ url_for('static', filename='img/social/school.svg') }}" />
+      <span>district website</span>
+    </a>
+    <a class="btn btn-secondary social-btn" target="_blank" href="https://mobile.twitter.com/FlyCVEagles">
+      <img src="{{ url_for('static', filename='img/social/twitter.svg') }}" class="img-fluid" />
+      <span>twitter</span>
+    </a>
+    <a class="btn btn-secondary social-btn" target="_blank" href="https://www.youtube.com/c/cumberlandvalleytv">
+      <img src="{{ url_for('static', filename='img/social/youtube.svg') }}" class="img-fluid" />
+      <span>youtube</span>
+    </a>
+  </div>
+</section>
+
+<section>
+  <div class="parallelogram">
+    <div class="container quote-container">
+      <blockquote class="blockquote">
+        <p class="display-6">Soaring to Greatness, Committed to Excellence</p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>our stellar teachers</h2>
+  </div>
+
+  <!-- Container for the image gallery -->
+  <div class="container slideshow-container">
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/teachers/kofmehl.jpg') }}" />
+    </div>
+
+    <div class="mySlides">
+      <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/teachers/ensminger.jpg') }}" />
+    </div>
+
+    <div class="mySlides">
+      <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/teachers/kern.jpg') }}" />
+    </div>
+
+    <div class="mySlides">
+      <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/teachers/ciuta.jpg') }}" />
+    </div>
+
+    <div class="mySlides">
+      <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/teachers/stuckey.jpg') }}" />
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail images -->
+    <div class="slide-row">
+      <div class="slide-column">
+        <img
+          class="demo cursor thumb-img"
+          src="{{ url_for('static', filename='img/teachers/kofmehl.jpg') }}"
+          onclick="currentSlide(1)"
+          alt="Mr. Kofmehl - Engineering Teacher"
+        />
+      </div>
+      <div class="slide-column">
+        <img
+          class="demo cursor thumb-img"
+          src="{{ url_for('static', filename='img/teachers/ensminger.jpg') }}"
+          onclick="currentSlide(2)"
+          alt="Mr. Ensminger - Computer Science Teacher"
+        />
+      </div>
+      <div class="slide-column">
+        <img
+          class="demo cursor thumb-img"
+          src="{{ url_for('static', filename='img/teachers/kern.jpg') }}"
+          onclick="currentSlide(3)"
+          alt="Ms. Kern - Engineering Teacher"
+        />
+      </div>
+      <div class="slide-column">
+        <img
+          class="demo cursor thumb-img"
+          src="{{ url_for('static', filename='img/teachers/ciuta.jpg') }}"
+          onclick="currentSlide(4)"
+          alt="Mr. Ciuta - Engineering Teacher"
+        />
+      </div>
+      <div class="slide-column">
+        <img
+          class="demo cursor thumb-img"
+          src="{{ url_for('static', filename='img/teachers/stuckey.jpg') }}"
+          onclick="currentSlide(5)"
+          alt="Mr. Stuckey - Engineering Teacher"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>career pathways</h2>
+
+    <p>
+      <button
+        class="btn btn-secondary btn-lg"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseProgramming"
+        aria-expanded="false"
+        aria-controls="collapseProgramming"
+      >
+        programming
+      </button>
+    </p>
+
+    <div class="collapse" id="collapseProgramming">
+      <div class="card card-body">
+        <h3>Computer Science/Programming I</h3>
+        <p>
+          Intro to Computer Science is a hands-on computer course for students who wish to learn about the history of
+          computers and programming languages, how a computer operates, how it can be used in real life situations, and
+          basic computer programming.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>Computer Science/Programming II</h3>
+        <p>
+          A class intended primarily for students wishing to pursue computer science at the college level, this is a
+          hands-on computer science / programming course for students who understood and enjoyed the basics of computer
+          programming. It will demonstrate programming concepts in the C++ and Java languages.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>AP Computer Science A</h3>
+        <p>
+          Designed for students wishing to pursue computer science at the college level, students enrolled in this
+          course are expected to take the AP Computer Science A exam. This course is for students who enjoy programming
+          and want to pursue it to an even deeper level. Programming skills will be enhanced through the study of the
+          Java language and HTML.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>Computer Science Independent Study</h3>
+        <p>
+          Students in this course will present the teacher with a project proposal(s) which will then be worked on
+          throughout the school year during an agreed upon schedule of classes. Sample project ideas include designing a
+          program for teacher/school use, learning a new programming language, or creating a website.
+        </p>
+      </div>
+    </div>
+
+    <p>
+      <button
+        class="btn btn-secondary btn-lg"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseEngineering"
+        aria-expanded="false"
+        aria-controls="collapseEngineering"
+      >
+        engineering
+      </button>
+    </p>
+
+    <div class="collapse" id="collapseEngineering">
+      <div class="card card-body">
+        <h3>Introduction to Engineering Design</h3>
+        <p>
+          In Introduction to Engineering Design (IED) students are introduced to the engineering design process,
+          applying math, science, and engineering standards to identify and design solutions to a variety of real world
+          problems. They work both individually and in collaborative teams to develop and document design solutions
+          using PLTW Engineering Notebooks and 3D modeling software.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>Principles of Engineering</h3>
+        <p>
+          In Principles of Engineering (POE), students explore a broad range of engineering topics, including
+          mechanisms, the strength of structures and materials, and automation through problems that engage and
+          challenge. Students develop skills in problem solving, research, and design while learning strategies for
+          design process documentation, collaboration, and presentation.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>Civil Engineering & Architecture</h3>
+        <p>
+          In Civil Engineering and Architecture (CEA), students learn important aspects of building and site design and
+          development. They apply math, science, and standard engineering practices to design both residential and
+          commercial projects and document their work using 3D architectural design software.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>Computer Integrated Manufacturing</h3>
+        <p>
+          Manufactured items are part of everyday life, yet most students have not been introduced to the high-tech,
+          innovative nature of modern manufacturing. This course illuminates the opportunities related to understanding
+          manufacturing. At the same time, it teaches students about manufacturing processes, product design, robotics,
+          and automation. Students can earn a virtual manufacturing badge recognized by the National Manufacturing Badge
+          system.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>Digital Electronics</h3>
+        <p>
+          From smartphones to appliances, digital circuits are all around us. Digital Electronics (DE) course provides a
+          foundation for students who are interested in electrical engineering, electronics, or circuit design. Students
+          study topics such as combinational and sequential logic and are exposed to circuit design tools used in
+          industry, including logic gates, integrated circuits, and programmable logic devices.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>Engineering Design & Development</h3>
+        <p>
+          In Engineering Design and Development (EDD), students identify a real-world challenge and then research,
+          design, and test a solution, ultimately presenting their unique solutions to a panel of engineers.
+        </p>
+      </div>
+    </div>
+
+    <p>
+      <button
+        class="btn btn-secondary btn-lg"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseBusiness"
+        aria-expanded="false"
+        aria-controls="collapseBusiness"
+      >
+        business
+      </button>
+    </p>
+    <div class="collapse" id="collapseBusiness">
+      <div class="card card-body">
+        <h3>Introduction to Business</h3>
+        <p>
+          This is an introductory/sampler course all students should take to prepare them for future business courses
+          and to be a knowledgeable consumer, well-prepared employee, and effective citizen in our economy. Units
+          covered include business in the global economic environment; business organization and management; business
+          operations and technology; and personal financial management.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>Business Law I</h3>
+        <p>
+          This course is open to students who wish to learn about our legal system. Topics include: minors’ rights and
+          responsibilities, consumer’s role in society, criminal and civil law and the court system, contracts, credit,
+          insurance and legal implications in owning property.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>Business Law II</h3>
+        <p>
+          This course picks up where Business Law I ended. Topics include: consumer laws; sales contracts; ownership and
+          risk of loss; property and bailments; and laws in employment and business ownership. Students will observe an
+          actual trial at the Dauphin County Courthouse and compete in a Mock Trial against their peers.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>College Business 101</h3>
+        <p>
+          Introduces students to the broad field of business. This course covers an overview of the basic functions of
+          business including management, marketing, finance, accounting, and human resources. The course also introduces
+          students to basic economic systems and discusses the importance of ethics and corporate social responsibility
+          to business success.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>Accounting I</h3>
+        <p>
+          Accounting is the language of business. This course is for students who plan to enroll in accounting or any
+          related business programs in college, as well as for those students who plan to enter the business world upon
+          high school graduation. Students learn the theory of accounting and receive practice in recording business
+          transactions. Students will prepare financial statements. A real-life simulation involving the preparation of
+          records for a small business is included.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>Entrepreneurship I</h3>
+        <p>
+          This course is designed for those students who wish to learn how to run and manage a business. Topics include
+          selecting a location, raising capital, organizing operations, establishing service and credit policies, buying
+          merchandise, preparing goods for sale, pricing, advertising, display, selling techniques, keeping accurate
+          records, economics and government regulations.
+        </p>
+      </div>
+    </div>
+
+    <p>
+      <button
+        class="btn btn-secondary btn-lg"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseDesign"
+        aria-expanded="false"
+        aria-controls="collapseDesign"
+      >
+        design
+      </button>
+    </p>
+    <div class="collapse" id="collapseDesign">
+      <div class="card card-body">
+        <h3>Foundations of Graphic Communication</h3>
+        <p>
+          This course is an introduction to concepts of Graphic Communications from creation of ideas to the development
+          of graphics products such as screen printed t-shirts and video game case covers. Students will apply
+          fundamental skills in the areas of technical illustration, computer illustration, desktop publishing, &
+          screen-printing.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>Photography & Visual Communication</h3>
+        <p>
+          This course introduces seeing, thinking, and creating through the photographic form. Students will learn the
+          fundamentals of using a digital single lens reflex camera (DSLR) while exploring a variety of photographic
+          concepts and techniques including composition, lighting, and digital editing software. Members of the class
+          must be prepared to work independently and in groups.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>2D Design Drawing & Painting</h3>
+        <p>
+          This class is an introductory class in drawing and design. The focus is to develop the confidence to draw,
+          paint, and understand design according to their own tastes and preferences. Students will use a variety of
+          media from graphite and charcoal, acrylic paint and pastel to drawing on digital tablets. This visual training
+          is good for any student interested in art and design, publishing, architecture and engineering, illustration,
+          cartooning, animation, fashion, industrial design as well as digital design in multiple fields.
+        </p>
+      </div>
+      <div class="card card-body">
+        <h3>Visual Communication Portfolio</h3>
+        <p>
+          This course introduces seeing, thinking, and creating with a critical mind and eye to provide understanding of
+          the construction and manipulation of photographic form and meaning. Students will use digital software to
+          edit, manipulate, and enhance their work with the ultimate goal of creating a portfolio that showcases visual
+          voice and artistic expression through both concentration and breadth work.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+:root {
+  --brightness: 0.3;
+  --parallelogram-brightness: calc(2 - var(--brightness));
+  --parallelogram-color: rgba(0, 0, 0, 0.4);
+}
+
+/* parallelogram div on landing page */
+.parallelogram {
+  backdrop-filter: brightness(var(--parallelogram-brightness));
+  padding: 1em 2em;
+
+  -webkit-clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.quote-container {
+  padding: 4em 2em;
+}
+
+/* make quote container look good */
+.blockquote {
+  border-radius: 10px;
+  padding: 3em;
+  margin: 1em 0;
+  text-shadow: black 0 0 5px;
+}
+
+.blockquote p {
+  font-style: italic;
+}
+
+.blockquote-footer {
+  color: var(--cool-gray);
+  font-size: 0.8em;
+  padding-top: 0.5em;
+}
+
+@media only screen and (max-width: 574px) {
+  .blockquote {
+    padding: 0em;
+  }
+
+  .parallelogram {
+    -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+  }
+}

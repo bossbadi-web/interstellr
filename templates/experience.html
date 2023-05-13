@@ -1,0 +1,48 @@
+{% extends "layouts/layout.html" %} {% block content %}
+
+<style>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("{{ url_for('static', filename='img/bg/capsule-low.jpg') }}") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    filter: brightness(0.3);
+    transform: scaleX(-1);
+    z-index: -1;
+  }
+</style>
+
+<div id="background"></div>
+
+<section>
+  <div class="container">
+    <h1 class="display-1">experience</h1>
+
+    <h2>what you get</h2>
+    <ul>
+      <li>two fully rotating thrusters provide us the ability for precise mobility and dynamic positioning</li>
+      <li>6 hours</li>
+      <li>low G force</li>
+      <li>feel of an astronaut and view of the world</li>
+      <li>8 passengers</li>
+    </ul>
+
+    <h2>future plans</h2>
+    <ul>
+      <li>test flights are beginning soon this year to verify that we are ready to go commercial</li>
+      <li>
+        we plan to keep Space Explorers comfortable in our pressurized SpaceBallon by keeping from using any intense
+        propulsion or G forces
+      </li>
+      <li>we plan to expand to other areas in the world to offer flights with different views</li>
+    </ul>
+  </div>
+</section>
+
+{% endblock %}

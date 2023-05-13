@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev {
+  left: 0;
+  border-radius: 0 10px 10px 0;
+}
+.next {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  padding: 1em 0;
+  color: white;
+}
+
+.slide-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.slide-column {
+  float: left;
+  width: calc(100% / 8);
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.slideshow-container {
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.slideshow-img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.thumb-img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
