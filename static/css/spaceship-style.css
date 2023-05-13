@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Montserrat:wght@300;400;500&display=swap");
 #spaceBanner {
   display: block;
   width: 100%;
@@ -64,10 +63,6 @@
   text-align: center;
   margin-left: 300px;
   margin-right: 300px;
-}
-* {
-  margin: 0;
-  padding: 0;
 }
 .timeline {
   margin: 5em auto;
@@ -136,9 +131,8 @@
 .checkpoint:nth-child(even) div::before {
   right: -0.5em;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1300px) {
   .timeline {
-    width: 80%;
     margin: 2em auto;
   }
   #spaceflight_block1 p {
@@ -212,10 +206,6 @@
     object-fit: cover;
     object-position: 100% 0%;
   }
-  h2 {
-    text-align: center;
-  }
-
   #index_block1 {
     margin-top: 50px;
   }
