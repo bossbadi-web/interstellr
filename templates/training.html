@@ -1,5 +1,9 @@
 {% extends "layouts/layout.html" %} {% block content %}
 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/training-style.css') }}" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 <style>
   #background {
     position: fixed;
@@ -7,84 +11,28 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("{{ url_for('static', filename='img/training/training.jpg') }}") no-repeat center center;
+    background: url("{{ url_for('static', filename='img/training/pool.jpg') }}") no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
     display: flex;
     filter: brightness(0.3);
-    transform: scaleX(-1);
     z-index: -1;
-  }
-
-  .bgimg-1,
-  .bgimg-2,
-  .bgimg-3 {
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-  }
-
-  .bgimg-1 {
-    background-image: url("{{ url_for('static', filename='img/training/mockup.jpg') }}");
-  }
-
-  .bgimg-2 {
-    background-image: url("{{ url_for('static', filename='img/training/pool.jpg') }}");
-  }
-
-  .bgimg-3 {
-    background-image: url("{{ url_for('static', filename='img/training/treadmill.jpg') }}");
-  }
-
-  .main-text {
-    height: 100vh;
-    padding-top: 3em;
-  }
-
-  section {
-    margin: 0;
-    padding: 0;
-    border-style: none none solid none;
-    border-width: 10px;
-    border-color: var(--cool-blue);
-  }
-
-  .caption {
-    top: 0;
-    margin: 0;
-    padding: 4em 2em;
-    background-color: var(--cooler-blue);
-  }
-
-  .footer {
-    background-color: var(--cool-blue);
   }
 </style>
 
 <div id="background"></div>
 
-<section class="main-text">
+<section>
   <div class="container mobile-center">
     <h1 class="display-1">training</h1>
-    <p class="subheader">What is the training process for astronauts?</p>
   </div>
-</section>
 
-<section class="caption">
   <div class="container">
-    Astronauts practice in life-sized models, called Space Vehicle Mock-up Facility. This way, they can learn how to
-    move about in the facility.
-  </div>
-</section>
-
-<section class="bgimg-1"></section>
-
-<section class="caption">
-  <div class="container">
+    <p>
+      Astronauts practice in life-sized models, called Space Vehicle Mock-up Facility. This way, they can learn how to
+      move about in the facility.
+    </p>
     <p>There are many different ways to train for microgravity:</p>
     <ul>
       <li>
@@ -101,18 +49,265 @@
         practice in the Neutral Buoyancy Laboratory Pool, where they can insert panels simulating the outside of space.
       </li>
     </ul>
+
+    <p>
+      People need to be physically fit to be an astronaut. In space, it may be hard to stay fit. Fortunately, there are
+      specialized treadmills in the space station.
+    </p>
   </div>
 </section>
 
-<section class="bgimg-2"></section>
-
-<section class="caption">
-  <div class="container">
-    People need to be physically fit to be an astronaut. In space, it may be hard to stay fit. Fortunately, there are
-    specialized treadmills in the space station.
+<section>
+  <div class="container" id="classes">
+    <div class="accordion" id="classes_accordion">
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#class1_debriefing"
+            aria-expanded="false"
+            aria-controls="class1_debriefing"
+          >
+            Flight Debriefing
+          </button>
+        </h3>
+        <div id="class1_debriefing" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="lead text-center">
+              <strong>Time Required for Class:</strong> 2 hours<br />
+              <em>applies to all tours</em>
+            </p>
+            <p class="mx-3 text-center">
+              Before embarking on the tour, you will first need to know what the tour involves. The pilots of your tour
+              will explain the orbital parameters of the tour you are taking and also the entire trip itinerary. This is
+              also a good time to meet up with the pilots and ask them any questions you might have. This class will
+              help you understand the intricacies of what you're undertaking as you journey to space and how the tour's
+              objectives will be met.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#class2_checkup"
+            aria-expanded="false"
+            aria-controls="class2_checkup"
+          >
+            Health Check-Up
+          </button>
+        </h3>
+        <div id="class2_checkup" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="lead text-center">
+              <strong>Time Required for Class:</strong> 4 hours<br />
+              <em>applies to all tours</em>
+            </p>
+            <p class="mx-3 text-center">
+              Before embarking on your space adventure, it's important to ensure that you're in good health and ready
+              for the rigors of spaceflight. That's where our health checkup comes in. In this class, our experienced
+              medical team will perform a thorough assessment of your physical and mental health to make sure that
+              you're fit to travel to space.
+            </p>
+            <p class="mx-3 text-center">
+              We'll monitor several important aspects of your health, from cardiovascular health and respiratory
+              function to psychological well-being and stress management. If you're deemed to be in good physical and
+              mental health, you will be allowed to continue on the tour.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#class3_teambuilding"
+            aria-expanded="false"
+            aria-controls="class3_teambuilding"
+          >
+            Team Building
+          </button>
+        </h3>
+        <div id="class3_teambuilding" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="lead text-center">
+              <strong>Time Required for Class:</strong> 4 hours<br />
+              <em>applies to all tours</em>
+            </p>
+            <p class="mx-3 text-center">
+              Our team-building class is designed to enhance teamwork and collaboration among passengers, preparing them
+              for the unique challenges of space travel. Through a series of interactive exercises and group activities,
+              passengers will learn how to communicate effectively, build trust, and work together to achieve common
+              goals.
+            </p>
+            <p class="mx-3 text-center">
+              Our instructors will guide passengers through a variety of team-building exercises, such as
+              problem-solving challenges and group activities. These exercises are designed to foster communication and
+              trust and help passengers develop a deeper understanding of their individual strengths and weaknesses. By
+              the end of the class, passengers will have gained valuable skills and insights into effective teamwork,
+              which will aid them on the tour.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#class4_emergency"
+            aria-expanded="false"
+            aria-controls="class4_emergency"
+          >
+            Emergency Procedures and First Aid
+          </button>
+        </h3>
+        <div id="class4_emergency" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="lead text-center">
+              <strong>Time Required for Class:</strong> 10 hours<br />
+              <em>applies to all tours</em>
+            </p>
+          </div>
+          <p class="mx-3 text-center">
+            While Odyssey has not as of yet had even a single life-threatening situation develop on its tours,
+            emergencies can happen at any time, and it's crucial to have the skills and knowledge to know what to do
+            then. While onboard a tour, you can have two kinds of emergencies: medical, wherein the pilot or a fellow
+            passenger is affected, or orbital, which includes failure of mechanical systems on the vehicle you're using.
+          </p>
+          <p class="mx-3 text-center">
+            For onboard emergencies, such as failure of navigation or life support systems or a loss of pressure, you'll
+            learn how to turn on backup systems, communicate with ground control, and otherwise be prepared for such an
+            eventuality. For medical emergencies, you'll learn how to assess and treat a range of common injuries and
+            illnesses, from cuts and burns to fractures and sprains. You'll also learn how to recognize the signs of
+            more serious medical conditions, such as heart attacks and strokes, and how to respond effectively to these
+            emergencies.
+          </p>
+          <p class="mx-3 text-center">
+            Our experienced instructors will guide you through hands-on training exercises, allowing you to practice and
+            refine your skills in a safe and supportive environment. By the end of the class, you'll have the knowledge
+            and confidence to handle a variety of medical and orbital emergency situations, making you a valuable asset.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#class5_spaceflightbasics"
+            aria-expanded="false"
+            aria-controls="class5_spaceflightbasics"
+          >
+            Basics of Launched Spaceflight
+          </button>
+        </h3>
+        <div id="class5_spaceflightbasics" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="lead text-center">
+              <strong>Time Required for Class:</strong> 10 hours<br />
+              <em>applies to only the Zenith&#8482; and ISS&#8482; tours</em>
+            </p>
+            <p class="mx-3 text-center">
+              This class was designed with the passengers of the Zenith&#8482; and ISS&#8482; tours in mind. This is
+              meant to be a basic introduction to launched spaceflight, i.e., with rockets involved, unlike a
+              conventional plane as with the WorldWideTM tour. This class will discuss terminology and the science
+              behind, well, rocket science, and also allow passengers on these tours to gain a deeper understanding of
+              rocket-lashed spaceflight.
+            </p>
+            <p class="mx-3 text-center">
+              In about two days' worth of time, this class will cover the history of spaceflight, the evolution of
+              rockets, and also the physics behind them. It will also go into depth about experiences specific to
+              rockets, such as the G-forces you will have to face during launch and reentry and how recovery differs
+              from the WorldWide&#8482; tour.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#class6_simulator"
+            aria-expanded="false"
+            aria-controls="class6_simulator"
+          >
+            Flight Simulator
+          </button>
+        </h3>
+        <div id="class6_simulator" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="lead text-center">
+              <strong>Time Required for Class:</strong> 20 hours<br />
+              <em>applies to only the Zenith&#8482; and ISS&#8482; tours</em>
+            </p>
+            <p class="mx-3 text-center">
+              Our flight simulation class is designed to give passengers a realistic experience of space travel while
+              also preparing them for the extreme pressures of launch and re-entry. Through a series of immersive
+              simulations, passengers will learn what it's like to be an astronaut and get a taste of what it's like to
+              travel through space.
+            </p>
+            <p class="mx-3 text-center">
+              Our experienced instructors will guide passengers through a variety of simulation exercises, allowing them
+              to experience the feeling of launching into space, orbiting the Earth, and reentering the atmosphere. This
+              class will help the passengers know what to expect and become acclimated to the tour experience.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#class7_advancedtraining"
+            aria-expanded="false"
+            aria-controls="class7_advancedtraining"
+          >
+            Advanced Training - ISS Structure and Living in Space
+          </button>
+        </h3>
+        <div id="class7_advancedtraining" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p class="lead text-center">
+              <strong>Time Required for Class:</strong> 20 hours<br />
+              <em>applies to only the ISS&#8482; tour</em>
+            </p>
+            <p class="mx-3 text-center">
+              The Advanced Training class is specially designed for the ISS&#8482; tour, keeping in mind that the
+              passengers of this tour have to live aboard the ISS and stay in space for longer periods of time. Our team
+              of experts will teach you the layout of the ISS, the rules and procedures to be followed onboard, and
+              specific emergency procedures for the ISS.
+            </p>
+            <p class="mx-3 text-center">
+              This class will also exclusively focus on what it's like to live in zero gravity, including the issue of
+              food and water in space and the importance of a proper sleeping cycle and exercise. You will also receive
+              information about the activities offered to tourists aboard the ISS. You'll also have the opportunity to
+              learn about daily life on the ISS and how it applies to the tour.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="bgimg-3"></section>
+<!--AOS Scripts-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 {% endblock %}
