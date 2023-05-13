@@ -1,19 +1,186 @@
 {% extends "layouts/layout.html" %} {% block content %}
 
+<style>
+  h2 {
+    color: var(--hot-orange);
+  }
+
+  .license {
+    font-size: 0.8em;
+  }
+
+  #references {
+    font-size: 0.8em;
+  }
+</style>
+
 <section>
   <div class="container">
     <h1 class="display-1">legal</h1>
 
-    <h2>frameworks</h2>
-    <p>
-      This website utilizes the Flask and Bootstrap frameworks. The theme used on these frameworks was built exclusively
-      by the team.
-    </p>
-
-    <br>
-
+    <h2>documents</h2>
     <a class="btn btn-secondary" href="/student-copyright-checklist">student copyright checklist</a>
     <a class="btn btn-secondary" href="/plan-of-work-log">plan of work log</a>
+
+    <h2>languages</h2>
+    <ul>
+      <li>Hyper-Text Markup Language</li>
+      <li>Cascading Style Sheets</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+    </ul>
+
+    <h2>resources</h2>
+    <p>
+      <b>code editor:</b> Visual Studio Code
+      <br />
+      <b>version control:</b> GitHub
+      <br />
+      <b>hosting:</b> Railway
+    </p>
+
+    <h2>font</h2>
+    <p>Anuphan by Cadson Demak</p>
+
+    <h2>frameworks</h2>
+    <p>
+      All code for this website was our own creation, built primarily on the Bootstrap framework. No templates or quick
+      design websites (such as Wix or Shopify) were used.
+    </p>
+    <h4>AOS</h4>
+    <p class="license">
+      The MIT License (MIT) Copyright (c) 2015 Michał Sajnóg Permission is hereby granted, free of charge, to any person
+      obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software
+      without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute,
+      sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+      subject to the following conditions: The above copyright notice and this permission notice shall be included in
+      all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+      KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+      PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
+      OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+      WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    </p>
+
+    <h4>Bootstrap</h4>
+    <p class="license">
+      The MIT License (MIT) Copyright (c) 2011-2023 The Bootstrap Authors Permission is hereby granted, free of charge,
+      to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in
+      the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish,
+      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+      furnished to do so, subject to the following conditions: The above copyright notice and this permission notice
+      shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
+      WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+      FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+      CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+      CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    </p>
+
+    <h4>Flask</h4>
+    <p class="license">
+      Copyright 2010 Pallets Redistribution and use in source and binary forms, with or without modification, are
+      permitted provided that the following conditions are met: 1. Redistributions of source code must retain the above
+      copyright notice, this list of conditions and the following disclaimer. 2. Redistributions in binary form must
+      reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation
+      and/or other materials provided with the distribution. 3. Neither the name of the copyright holder nor the names
+      of its contributors may be used to endorse or promote products derived from this software without specific prior
+      written permission. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
+      IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+      PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY
+      DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+      PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+      CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+      OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    </p>
+
+    <div id="references">
+      <h2>references</h2>
+
+      <p><strong>Articles:</strong></p>
+      <p>
+        Dunbar, Brian. &ldquo;Astronauts in Training.&rdquo; <em>NASA</em>, NASA,
+        https://www.nasa.gov/audience/forstudents/5-8/features/F_Astronauts_in_Training.html.&nbsp;
+      </p>
+      <p>
+        Foust, Jeff. &ldquo;Space Perspective Acquires Ship for Ocean-Based Balloon Launch Platform.&rdquo;
+        <em>SpaceNews</em>, 15 Nov. 2022,
+        https://spacenews.com/space-perspective-acquires-ship-for-ocean-based-balloon-launch-platform/.
+      </p>
+      <p>
+        &ldquo;Ms Voyager Is a Floating Spaceport That Will Launch the Spaceship Neptune Balloon into the
+        Stratosphere.&rdquo; <em>TechEBlog</em>, 18 Nov. 2022,
+        https://www.techeblog.com/space-perspective-ms-voyager-floating-spaceport-balloon/.
+      </p>
+      <p>
+        Petersen, Carolyn Collins. &ldquo;The Complex Process of Astronaut Training.&rdquo; <em>ThoughtCo</em>,
+        ThoughtCo, 3 July 2019, https://www.thoughtco.com/how-astronauts-train-for-space-4153500.&nbsp;
+      </p>
+      <p>
+        Schneider, Jaron. &ldquo;This Is the Specialized Vessel That Will Launch Photo Tourism Space Pods.&rdquo;
+        <em>PetaPixel</em>, 15 Nov. 2022,
+        https://petapixel.com/2022/11/15/this-is-the-specialized-vessel-that-will-launch-photo-tourism-space-pods/.
+      </p>
+      <p>
+        Space Coast Daily. &ldquo;Human Spaceflight: Space Perspective Unveiles MS Voyager at the Kennedy Space Center
+        .&rdquo; <em>Space Coast Daily</em>, 14 Nov. 2022,
+        https://spacecoastdaily.com/2022/11/human-spaceflight-space-perspective-unveiles-ms-voyager-at-the-kennedy-space-center/.&nbsp;
+      </p>
+      <p><strong>Images:</strong></p>
+      <p>
+        &ldquo;Bacteria Used to Make Supercharged Rocket Biofuel.&rdquo;
+        <em>Applied Sciences from Technology Networks</em>,
+        https://www.technologynetworks.com/applied-sciences/news/bacteria-used-to-make-supercharged-rocket-biofuel-363244.
+      </p>
+      <p>
+        Gemma. &ldquo;Train like an Astronaut at NASA Space Camp, Huntsville.&rdquo; <em>Two Scots Abroad</em>, Two
+        Scots Abroad Travel Guides, 1 June 2022,
+        https://www.twoscotsabroad.com/nasa-space-camp-alabama-train-like-an-astronaut/.&nbsp;
+      </p>
+      <p>
+        Hay, Richard. &ldquo;Space Vehicle Mockup Facility at Johnson Space Center.&rdquo; <em>ITPro Today</em>, 29 Oct.
+        2018,
+        https://www.itprotoday.com/mobile-management-and-security/space-vehicle-mockup-facility-johnson-space-center.&nbsp;
+      </p>
+      <p>
+        Hood, Bryan. &ldquo;Out of This World: Spacex to Launch First Commercial Space Flight in 2021.&rdquo;
+        <em>Robb Report</em>, Robb Report, 1 July 2019,
+        https://robbreport.com/motors/aviation/spacex-plans-for-first-commercial-space-flight-in-2856554/.
+      </p>
+      <p>
+        Jewett, Rachel. &ldquo;Virgin Galactic's Second Spaceship Hits 'Weight On Wheels' Milestone.&rdquo;
+        <em>Avionics International</em>, Avionics International, 9 Jan. 2020,
+        https://www.aviationtoday.com/2020/01/09/virgin-galactics-second-spaceship-hits-weight-wheels-milestone/.
+      </p>
+      <p>
+        Mason, Craig. &ldquo;Businessman Silhouette as Avatar or Default Profile Picture: Freedom's Promise.&rdquo;
+        <em>Freedom's Promise | Preventing Human Trafficking</em>, 30 Jan. 2020,
+        https://www.freedomspromise.org/businessman-silhouette-as-avatar-or-default-profile-picture/.
+      </p>
+      <p>
+        &ldquo;Mortarboard Vector Svg Icon.&rdquo; <em>SVG Repo</em>,
+        https://www.svgrepo.com/svg/89928/mortarboard.&nbsp;
+      </p>
+      <p>
+        &ldquo;Outer+Space+Window Images &ndash; Browse 1,458 Stock Photos, Vectors, and Video.&rdquo;
+        <em>Adobe Stock</em>, https://stock.adobe.com/search?k=outer%2Bspace%2Bwindow.
+      </p>
+      <p>
+        Rajan, Smriti. &ldquo;Spaceship Neptune's Cosmic Journey Will Take You to the K&aacute;rm&aacute;n Line.&rdquo;
+        <em>TechVersions</em>, 27 Sept. 2022,
+        https://techversions.com/blogs/spaceship-neptunes-cosmic-journey-will-take-you-to-the-karman-line/.&nbsp;
+      </p>
+      <p>
+        &ldquo;Saturn Clipart.&rdquo; <em>PNG Images Free</em>,
+        http://pngimagesfree.com/NATURE/Planet/Saturn-Planet-PNG.htm.
+      </p>
+      <p>
+        &ldquo;Spacewalk Training.&rdquo; <em>ESA</em>,
+        https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Astronauts/Spacewalk_training.&nbsp;
+      </p>
+      <p>
+        Wright, Jerry. &ldquo;Cosmonaut Max Suraev Runs on Colbert Treadmill.&rdquo; <em>NASA</em>, NASA, 22 Sept. 2014,
+        https://www.nasa.gov/content/cosmonaut-max-suraev-runs-on-colbert-treadmill/.&nbsp;
+      </p>
+    </div>
   </div>
 </section>
 
