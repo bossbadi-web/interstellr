@@ -1,7 +1,7 @@
 {% extends "layouts/layout.html" %} {% block content %}
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/spaceship-style.css') }}">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/spaceship-style.css') }}" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 <style>
@@ -20,6 +20,14 @@
     transform: scaleX(-1);
     z-index: -1;
   }
+
+  #history {
+    padding: 0 2em 1em 2em;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 </style>
 
 <div id="background"></div>
@@ -28,7 +36,7 @@
   <div class="container">
     <h1 class="display-1">spaceship</h1>
 
-    <h2>vehicle</h2>
+    <h2>Vehicle</h2>
     <p>
       The spaceship is a 292-foot-long vessel that is designed to take you on a 6-hour flight. It is equipped with two
       360 degrees rotating stern thrusters for precise mobility and dynamic positioning. The spaceship is designed to
@@ -39,7 +47,7 @@
       water, which can accommodate eight passengers.
     </p>
 
-    <h2>safety</h2>
+    <h2>Safety</h2>
     <p>
       Test flights are beginning soon this year to verify that we are ready to go commercial. Communications throughout
       the operation – between land, sea, and capsule – will be provided by Silvus Technologies, utilizing military-grade
@@ -47,14 +55,14 @@
       issues on the flight, the vessel will be pressurized.
     </p>
 
-    <h2>launch</h2>
+    <h2>Launch</h2>
     <p>
       We do our best to create ideal launch conditions making flights as frequent as possible. We constantly plan to
       move to areas of good weather and follow the sea breeze to minimize the impact of wind and minimize the likelihood
       of complications.
     </p>
 
-    <h2>recovery</h2>
+    <h2>Recovery</h2>
     <p>
       The cone shape at the bottom of the vessel will provide flyers with a smooth landing in the water. Fast boats from
       Fluid Watercraft will stabilize the capsule after it lands in the water so that the Marine Spaceport can lift it
@@ -64,14 +72,26 @@
 </section>
 
 <section>
+  <div class="container" id="history">
+    <h1 style="text-align: center">The History of Spaceflight</h1>
+    <p>
+      Space exploration has been a part of human history for decades. In 1957, the Soviet Union launched the first
+      artificial satellite, Sputnik 1, into orbit. This sparked a space race between the Soviet Union and the United
+      States, leading to several significant achievements. In 1961, Yuri Gagarin became the first human to journey into
+      space. The Zenith of the space race came in 1969, when the United States successfully landed astronauts on the
+      moon during the Apollo 11 mission. Since then, space exploration has continued with the launch of space probes,
+      orbiting telescopes, and space stations. Today, many countries and private companies are actively involved in
+      space exploration, with the goal of exploring further into our solar system and beyond.
+    </p>
+  </div>
   <div class="timeline">
     <div class="checkpoint">
       <div data-aos="fade-left">
         <h1 class="mt-0 pt-0 display-4 text-center text_logogradient">1957</h1>
         <p class="display-6 text-center">Sputnik 1</p>
         <p class="lead text-center">
-          The Soviet Union launches the first artificial satellite, Sputnik 1, into orbit, marking the
-          beginning of the space age.
+          The Soviet Union launches the first artificial satellite, Sputnik 1, into orbit, marking the beginning of the
+          space age.
         </p>
       </div>
     </div>
@@ -167,9 +187,7 @@
       <div data-aos="fade-left">
         <h1 class="mt-0 pt-0 display-4 text-center text_logogradient">2029</h1>
         <p class="display-6 text-center">Luna Base</p>
-        <p class="lead text-center">
-          The first human settlement on the moon is built for permanent occupation.
-        </p>
+        <p class="lead text-center">The first human settlement on the moon is built for permanent occupation.</p>
       </div>
     </div>
     <div class="checkpoint">
