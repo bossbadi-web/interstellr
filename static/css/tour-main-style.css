@@ -1,0 +1,153 @@
+@import url("colors.css");
+
+.tour_option {
+  border-radius: 42px;
+  margin: none;
+}
+#tour_option_image {
+  height: 180px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  width: 320px;
+}
+#option_container {
+  margin-bottom: 2%;
+}
+#option_container p {
+  color: rgb(6, 17, 60);
+}
+#icon {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  height: 180px;
+}
+#something {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+#dPlanet {
+  max-height: 150vh;
+  height: 150vh;
+}
+#secondary {
+  font-weight: 300;
+  font-size: 20px;
+}
+#tour_option1 {
+  background-color: rgb(238, 238, 238);
+  color: rgb(6, 17, 60);
+  border: 2px solid rgb(255, 140, 50);
+}
+#tour_option2 {
+  background-color: rgb(238, 238, 238);
+  color: rgb(6, 17, 60);
+  border: 2px solid rgb(255, 140, 50);
+}
+#tour_option3 {
+  background-color: rgb(238, 238, 238);
+  color: rgb(6, 17, 60);
+  border: 2px solid rgb(255, 140, 50);
+}
+#planets {
+  height: 75vh;
+  margin-top: 0%;
+  margin-bottom: 6%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#planets .container {
+  margin-top: 1%;
+}
+#planets h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 40px;
+  color: #ff8c32;
+}
+.opt {
+  padding: 5%;
+  padding-bottom: 0%;
+}
+.display-1 {
+  font-family: "Kanit", sans-serif;
+  font-size: 70px;
+}
+.display-6 {
+  font-weight: bolder;
+  color: rgb(6, 17, 60);
+}
+
+.cSpecial {
+  margin-left: 5%;
+}
+#text_container {
+  margin: 5% auto;
+  margin-bottom: 2%;
+}
+#cardSpec {
+  padding: 4%;
+}
+.card-circle {
+  background: radial-gradient(circle, var(--cool-blue-lighter) 0%, var(--cooler-blue) 100%);
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  border: 3px solid var(--hot-orange);
+  padding: 5%;
+  border-radius: 50%;
+}
+.card-circle .card-title {
+  font-weight: 600;
+  font-size: 26px;
+}
+.card-circle .card-text {
+  font-weight: 400;
+}
+.card-circle:nth-child(2) {
+  background: radial-gradient(circle, var(--cool-blue-lighter) 0%, var(--cool-blue) 100%);
+}
+.card-circle .btn {
+  background: transparent;
+  border: 1px solid var(--hot-orange);
+  text-transform: uppercase;
+  padding: 5px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--hot-orange);
+}
+.card-circle .btn,
+.card-circle .card-icon i,
+.card-circle {
+  transition: all ease-in-out 0.2s;
+}
+.card-circle .btn:hover {
+  transform: scale(1.1);
+}
+.card-circle:hover {
+  border: 7px solid var(--hot-orange);
+}
+.card-circle:hover i {
+  text-shadow: 0px -1px 10px #00a8cc;
+  transform: scale(1.2) rotate(20deg);
+}
+@media only screen and (min-width: 1200px) {
+  .card-circle:nth-child(3) {
+    margin-left: 0%;
+    z-index: 0;
+  }
+
+  .card-circle {
+    width: 400px;
+    height: 400px;
+  }
+  .card-circle:nth-child(2) {
+    margin-left: 0%;
+    box-shadow: 1px 2px 20px 8px rgba(241, 235, 235, 0.12);
+    transform: scale(1.2);
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 1399px) {
+  #planetary-tours {
+    display: none;
+  }
+}

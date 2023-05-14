@@ -1,5 +1,9 @@
 {% extends "layouts/layout.html" %} {% block content %}
 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tour-main-style.css') }}" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 <style>
   #background {
     position: fixed;
@@ -43,6 +47,43 @@
       <li>we plan to expand to other areas in the world to offer flights with different views</li>
     </ul>
   </div>
+
+  <div class="container" id="planetary-tours">
+    <h2 style="text-align: center">Planetary tours coming soon</h2>
+    <div class="row">
+      <!-- card1 -->
+      <div class="card card-circle cSpecial" id="cardSpec2">
+        <div class="card-body">
+          <h5 class="card-title">Saturn</h5>
+          <p class="card-text">Fly through the rings of Saturn and enjoy views of Saturn's various moons.</p>
+          <a href="/register" class="btn">Register</a>
+        </div>
+      </div>
+      <!-- card2 -->
+      <div class="card card-circle" id="cardSpec">
+        <div class="card-body">
+          <h5 class="card-title">Mars</h5>
+          <p class="card-text">
+            Learn more about the red planet while exploring its potential lifeforms and space settlements from a
+            galactic view.
+          </p>
+          <a href="/register" class="btn">Register</a>
+        </div>
+      </div>
+      <!-- card3 -->
+      <div class="card card-circle" id="cardSpec2">
+        <div class="card-body">
+          <h5 class="card-title">Jupiter</h5>
+          <p class="card-text">Enjoy the amazing view of Jupiter's red spot and land on one of Jupiter's moons!</p>
+          <a href="/register" class="btn">Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<br />
+
+<script src="{{ url_for('static', filename='js/tour-main-script.js') }}"></script>
 
 {% endblock %}
