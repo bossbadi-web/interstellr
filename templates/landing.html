@@ -1,8 +1,8 @@
 {% extends "layouts/layout.html" %} {% block content %}
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/earth.css') }}" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/parallelogram.css') }}" />
+<link rel="stylesheet" href="/static/css/landing.css" />
+<link rel="stylesheet" href="/static/css/earth.css" />
+<link rel="stylesheet" href="/static/css/parallelogram.css" />
 
 <style>
   #background {
@@ -11,7 +11,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("{{ url_for('static', filename='img/bg/capsule-earth-bg.jpg') }}") no-repeat center center;
+    background: url(/static/img/bg/capsule-earth-bg.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -24,8 +24,8 @@
 
 <div id="background">
   <div id="particles-js"></div>
-  <script src="{{ url_for('static', filename='particles/particles.js') }}"></script>
-  <script src="{{ url_for('static', filename='particles/app.js') }}"></script>
+  <script src="/static/particles/particles.js"></script>
+  <script src="/static/particles/app.js"></script>
 </div>
 
 <section>
@@ -69,7 +69,7 @@
       </div>
 
       <div class="p-2 img-wrapper">
-        <img class="img-fluid" src="{{ url_for('static', filename='img/landing/biofuel.jpg') }}" />
+        <img class="img-fluid" src="/static/img/landing/biofuel.jpg" />
       </div>
     </div>
   </div>
@@ -81,7 +81,7 @@
       <div class="p-2 img-wrapper">
         <img
           class="img-fluid"
-          src="{{ url_for('static', filename='img/landing/window-earth.jpg') }}"
+          src="/static/img/landing/window-earth.jpg"
           style="float: left"
         />
       </div>
@@ -107,7 +107,7 @@
       </div>
 
       <div class="p-2 img-wrapper">
-        <img class="img-fluid" src="{{ url_for('static', filename='img/landing/commercial.webp') }}" />
+        <img class="img-fluid" src="/static/img/landing/commercial.webp" />
       </div>
     </div>
   </div>
@@ -117,7 +117,7 @@
   <div class="container promo-container">
     <div class="d-flex flex-row">
       <div class="p-2 img-wrapper">
-        <img class="img-fluid" src="{{ url_for('static', filename='img/landing/sales.png') }}" style="float: left" />
+        <img class="img-fluid" src="/static/img/landing/sales.png" style="float: left" />
       </div>
       <div class="p-2 text-wrapper">
         <p>

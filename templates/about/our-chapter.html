@@ -1,6 +1,6 @@
 {% extends "layouts/layout.html" %} {% block content %}
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/slideshow.css') }}" />
+<link rel="stylesheet" href="/static/css/slideshow.css" />
 
 <style>
   #background {
@@ -9,7 +9,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("{{ url_for('static', filename='img/bg/regionals2022.jpg') }}") no-repeat center center;
+    background: url(/static/img/bg/regionals2022.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -58,7 +58,7 @@
       </div>
 
       <div class="p-2 img-wrapper">
-        <img class="img-fluid img-object" src="{{ url_for('static', filename='img/tsa-logo.png') }}" />
+        <img class="img-fluid img-object" src="/static/img/tsa-logo.png" />
       </div>
     </div>
 
@@ -73,46 +73,46 @@
     <div class="container slideshow-container">
       <!-- Full-width images with number text -->
       <div class="mySlides">
-        <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/officers/gupta_shubham.png') }}" />
+        <img class="img-fluid slideshow-img" src="/static/img/officers/gupta_shubham.png" />
       </div>
 
       <div class="mySlides">
         <img
           class="img-fluid slideshow-img"
-          src="{{ url_for('static', filename='img/officers/kakaria_vikram.png') }}"
+          src="/static/img/officers/kakaria_vikram.png"
         />
       </div>
 
       <div class="mySlides">
-        <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/officers/kumar_adithan.png') }}" />
+        <img class="img-fluid slideshow-img" src="/static/img/officers/kumar_adithan.png" />
       </div>
 
       <div class="mySlides">
-        <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/officers/shah_veer.png') }}" />
+        <img class="img-fluid slideshow-img" src="/static/img/officers/shah_veer.png" />
       </div>
 
       <div class="mySlides">
         <img
           class="img-fluid slideshow-img"
-          src="{{ url_for('static', filename='img/officers/thirunavukkarasu_sharan.png') }}"
+          src="/static/img/officers/thirunavukkarasu_sharan.png"
         />
       </div>
 
       <div class="mySlides">
         <img
           class="img-fluid slideshow-img"
-          src="{{ url_for('static', filename='img/officers/maliackel_adrian.png') }}"
+          src="/static/img/officers/maliackel_adrian.png"
         />
       </div>
 
       <div class="mySlides">
-        <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/officers/parikh_poorvi.png') }}" />
+        <img class="img-fluid slideshow-img" src="/static/img/officers/parikh_poorvi.png" />
       </div>
 
       <div class="mySlides">
         <img
           class="img-fluid slideshow-img"
-          src="{{ url_for('static', filename='img/officers/addagatla_laahini.png') }}"
+          src="/static/img/officers/addagatla_laahini.png"
         />
       </div>
 
@@ -130,7 +130,7 @@
         <div class="slide-column">
           <img
             class="demo cursor thumb-img"
-            src="{{ url_for('static', filename='img/officers/gupta_shubham.png') }}"
+            src="/static/img/officers/gupta_shubham.png"
             onclick="currentSlide(1)"
             alt="Shubham Gupta - President"
           />
@@ -138,7 +138,7 @@
         <div class="slide-column">
           <img
             class="demo cursor thumb-img"
-            src="{{ url_for('static', filename='img/officers/kakaria_vikram.png') }}"
+            src="/static/img/officers/kakaria_vikram.png"
             onclick="currentSlide(2)"
             alt="Vikram Kakaria - Vice President"
           />
@@ -146,7 +146,7 @@
         <div class="slide-column">
           <img
             class="demo cursor thumb-img"
-            src="{{ url_for('static', filename='img/officers/kumar_adithan.png') }}"
+            src="/static/img/officers/kumar_adithan.png"
             onclick="currentSlide(3)"
             alt="Adithan Kumar - Secretary"
           />
@@ -154,7 +154,7 @@
         <div class="slide-column">
           <img
             class="demo cursor thumb-img"
-            src="{{ url_for('static', filename='img/officers/shah_veer.png') }}"
+            src="/static/img/officers/shah_veer.png"
             onclick="currentSlide(4)"
             alt="Veer Shah - Treasurer"
           />
@@ -162,7 +162,7 @@
         <div class="slide-column">
           <img
             class="demo cursor thumb-img"
-            src="{{ url_for('static', filename='img/officers/thirunavukkarasu_sharan.png') }}"
+            src="/static/img/officers/thirunavukkarasu_sharan.png"
             onclick="currentSlide(5)"
             alt="Sharan Thirunavukkarasu - Sergeant-at-Arms"
           />
@@ -170,7 +170,7 @@
         <div class="slide-column">
           <img
             class="demo cursor thumb-img"
-            src="{{ url_for('static', filename='img/officers/maliackel_adrian.png') }}"
+            src="/static/img/officers/maliackel_adrian.png"
             onclick="currentSlide(6)"
             alt="Adrian Maliackel - Reporter"
           />
@@ -178,7 +178,7 @@
         <div class="slide-column">
           <img
             class="demo cursor thumb-img"
-            src="{{ url_for('static', filename='img/officers/parikh_poorvi.png') }}"
+            src="/static/img/officers/parikh_poorvi.png"
             onclick="currentSlide(7)"
             alt="Poorvi Parikh - Palimentarian"
           />
@@ -186,7 +186,7 @@
         <div class="slide-column">
           <img
             class="demo cursor thumb-img"
-            src="{{ url_for('static', filename='img/officers/addagatla_laahini.png') }}"
+            src="/static/img/officers/addagatla_laahini.png"
             onclick="currentSlide(8)"
             alt="Laahini Addagatla - Historian"
           />
@@ -222,6 +222,6 @@
   </div>
 </section>
 
-<script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
+<script src="/static/js/slideshow.js"></script>
 
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends "layouts/layout.html" %} {% block content %}
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/parallelogram.css') }}" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/slideshow.css') }}" />
+<link rel="stylesheet" href="/static/css/parallelogram.css" />
+<link rel="stylesheet" href="/static/css/slideshow.css" />
 
 <style>
   #background {
@@ -10,7 +10,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("{{ url_for('static', filename='img/bg/cvhs.jpg') }}") no-repeat center center;
+    background: url(/static/img/bg/cvhs.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -67,15 +67,15 @@
 
     <h2>Quick links</h2>
     <a class="btn btn-secondary social-btn" target="_blank" href="https://www.cvschools.org">
-      <img src="{{ url_for('static', filename='img/social/school.svg') }}" />
+      <img src="/static/img/social/school.svg" />
       <span>district website</span>
     </a>
     <a class="btn btn-secondary social-btn" target="_blank" href="https://mobile.twitter.com/FlyCVEagles">
-      <img src="{{ url_for('static', filename='img/social/twitter.svg') }}" class="img-fluid" />
+      <img src="/static/img/social/twitter.svg" class="img-fluid" />
       <span>twitter</span>
     </a>
     <a class="btn btn-secondary social-btn" target="_blank" href="https://www.youtube.com/c/cumberlandvalleytv">
-      <img src="{{ url_for('static', filename='img/social/youtube.svg') }}" class="img-fluid" />
+      <img src="/static/img/social/youtube.svg" class="img-fluid" />
       <span>youtube</span>
     </a>
   </div>
@@ -100,23 +100,23 @@
   <div class="container slideshow-container">
     <!-- Full-width images with number text -->
     <div class="mySlides">
-      <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/teachers/kofmehl.jpg') }}" />
+      <img class="img-fluid slideshow-img" src="/static/img/teachers/kofmehl.jpg" />
     </div>
 
     <div class="mySlides">
-      <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/teachers/ensminger.jpg') }}" />
+      <img class="img-fluid slideshow-img" src="/static/img/teachers/ensminger.jpg" />
     </div>
 
     <div class="mySlides">
-      <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/teachers/kern.jpg') }}" />
+      <img class="img-fluid slideshow-img" src="/static/img/teachers/kern.jpg" />
     </div>
 
     <div class="mySlides">
-      <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/teachers/ciuta.jpg') }}" />
+      <img class="img-fluid slideshow-img" src="/static/img/teachers/ciuta.jpg" />
     </div>
 
     <div class="mySlides">
-      <img class="img-fluid slideshow-img" src="{{ url_for('static', filename='img/teachers/stuckey.jpg') }}" />
+      <img class="img-fluid slideshow-img" src="/static/img/teachers/stuckey.jpg" />
     </div>
 
     <!-- Next and previous buttons -->
@@ -133,7 +133,7 @@
       <div class="slide-column">
         <img
           class="demo cursor thumb-img"
-          src="{{ url_for('static', filename='img/teachers/kofmehl.jpg') }}"
+          src="/static/img/teachers/kofmehl.jpg"
           onclick="currentSlide(1)"
           alt="Mr. Kofmehl - Engineering Teacher"
         />
@@ -141,7 +141,7 @@
       <div class="slide-column">
         <img
           class="demo cursor thumb-img"
-          src="{{ url_for('static', filename='img/teachers/ensminger.jpg') }}"
+          src="/static/img/teachers/ensminger.jpg"
           onclick="currentSlide(2)"
           alt="Mr. Ensminger - Computer Science Teacher"
         />
@@ -149,7 +149,7 @@
       <div class="slide-column">
         <img
           class="demo cursor thumb-img"
-          src="{{ url_for('static', filename='img/teachers/kern.jpg') }}"
+          src="/static/img/teachers/kern.jpg"
           onclick="currentSlide(3)"
           alt="Ms. Kern - Engineering Teacher"
         />
@@ -157,7 +157,7 @@
       <div class="slide-column">
         <img
           class="demo cursor thumb-img"
-          src="{{ url_for('static', filename='img/teachers/ciuta.jpg') }}"
+          src="/static/img/teachers/ciuta.jpg"
           onclick="currentSlide(4)"
           alt="Mr. Ciuta - Engineering Teacher"
         />
@@ -165,7 +165,7 @@
       <div class="slide-column">
         <img
           class="demo cursor thumb-img"
-          src="{{ url_for('static', filename='img/teachers/stuckey.jpg') }}"
+          src="/static/img/teachers/stuckey.jpg"
           onclick="currentSlide(5)"
           alt="Mr. Stuckey - Engineering Teacher"
         />
@@ -417,6 +417,6 @@
   </div>
 </section>
 
-<script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
+<script src="/static/js/slideshow.js"></script>
 
 {% endblock %}
