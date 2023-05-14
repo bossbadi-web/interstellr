@@ -217,6 +217,7 @@ figcaption {
   width: 90px;
   fill: #5336ca;
 }
+
 #orbitalTraining .Odyssey_rounded_image {
   width: 200px;
   height: 200px;
@@ -225,11 +226,17 @@ figcaption {
 #orbitalTraining {
   padding: 2% 5%;
 }
-#orbitalTraining .threeFourthGrid {
-  justify-content: space-evenly;
-  align-content: space-evenly;
+.Odyssey_rounded_image {
+  border-radius: 50%;
 }
-@media screen and (max-width: 480px) {
+
+.flex-grow-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 991px) {
   #spaceBanner {
     display: block;
     width: 100%;
@@ -258,9 +265,6 @@ figcaption {
   #Ptable {
     display: none;
   }
-  #classes {
-    margin: 5% 0%;
-  }
   #orbitalTraining h4 {
     font-size: 20px;
   }
@@ -279,8 +283,5 @@ figcaption {
     padding-bottom: 2%;
     padding-left: 5%;
     padding-right: 5%;
-  }
-  .hide {
-    display: none;
   }
 }
