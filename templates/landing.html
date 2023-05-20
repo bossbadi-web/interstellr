@@ -24,7 +24,6 @@
 
 <div id="background">
   <div id="particles-js"></div>
-
 </div>
 
 <section>
@@ -146,6 +145,23 @@
   const contactSection = document.querySelector(".contact-section");
   const spacer = document.querySelector(".spacer");
   spacer.style.height = contactSection.offsetHeight + "px";
+
+  // fake form submission
+  const form = document.querySelector("form");
+  form.addEventListener("submit", (e) => {
+    const emailInput = document.querySelector("#email");
+    emailInput.addEventListener("click", () => {
+      emailInput.value = "";
+    });
+
+    const subscribeButton = document.querySelector(".btn-primary");
+    subscribeButton.disabled = true;
+    subscribeButton.innerText = "subscribed!";
+    subscribeButton.classList.remove("btn-primary");
+    subscribeButton.classList.add("btn-success");
+
+    e.preventDefault();
+  });
 </script>
 
 <script src="/static/particles/particles.js"></script>
