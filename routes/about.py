@@ -3,6 +3,11 @@ from flask import render_template, Blueprint
 about = Blueprint('about', __name__)
 
 
+@about.route('/contact', methods=['GET'])
+def contact():
+    return render_template('about/contact.html')
+
+
 @about.route('/our-chapter', methods=['GET'])
 def our_chapter():
     return render_template('about/our-chapter.html')
