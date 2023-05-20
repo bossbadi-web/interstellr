@@ -1,5 +1,8 @@
 # interstellr
-2022-23 TSA Webmaster, Team 2009-901
+Webmaster \
+2023 National TSA Conference \
+June 28 - July 2, 2023 • Louisville, Kentucky \
+Team ID: 1005-Team 1
 
 ## About
 This application uses the Flask framework in the Python language.
