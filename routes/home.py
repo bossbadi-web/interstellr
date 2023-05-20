@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint
+from flask import render_template, request, Blueprint
 
 home = Blueprint('home', __name__)
 
@@ -20,7 +20,7 @@ def experience():
 
 @home.route('/register', methods=['GET'])
 def register():
-    return render_template('register.html')
+    return render_template('register.html', tour=request.args.get('tour'))
 
 
 @home.route('/spaceship', methods=['GET'])

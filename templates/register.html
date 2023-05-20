@@ -32,9 +32,22 @@
 <section>
   <div class="container">
     <h1 class="display-1" data-aos="fade-right">register</h1>
-    <p>The price of a flight is $125,000 per person.</p>
-    <br />
     <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputTour" class="form-label">select your tour</label>
+        <select id="inputTour" class="form-select" onchange="updatePrice()" required>
+          <option value="earth">earth</option>
+          <option value="mars">mars</option>
+          <option value="jupiter">jupiter</option>
+          <option value="saturn">saturn</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPrice" class="form-label">price for one person</label>
+        <input type="text" class="form-control" id="inputPrice" readonly />
+      </div>
+      <div class="mb-3"></div>
+
       <h2>Registrant information</h2>
       <div class="col-md-6">
         <label for="inputFName" class="form-label">first name</label>
@@ -148,7 +161,6 @@
           <option>American Express</option>
           <option>Bank of America</option>
           <option>Capital One</option>
-          <option>Capital One</option>
           <option>Chase</option>
           <option>Citi</option>
           <option>Discover</option>
@@ -247,10 +259,45 @@
       </div>
 
       <div class="col-12">
-        <button class="btn btn-primary btn-lg">submit order</button>
+        <button class="btn btn-primary btn-lg" type="submit">submit order</button>
       </div>
     </form>
   </div>
 </section>
+
+<script>
+  function updatePrice() {
+    var tour = document.getElementById("inputTour").value;
+    var price = document.getElementById("inputPrice");
+    if (tour == "earth") {
+      price.value = "$100,000";
+    } else if (tour == "mars") {
+      price.value = "$125,000";
+    } else if (tour == "jupiter") {
+      price.value = "$300,000";
+    } else if (tour == "saturn") {
+      price.value = "$500,000";
+    }
+  }
+
+  // select the option based on the value of the variable "tour"
+  var tour = "{{ tour }}";
+  var select = document.getElementById("inputTour");
+  for (var i = 0; i < select.options.length; i++) {
+    if (select.options[i].value == tour) {
+      select.options[i].selected = true;
+    }
+  }
+
+  updatePrice();
+
+  // fake form submission
+  var form = document.querySelector("form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Your order has been submitted!");
+    window.location.href = "/";
+  });
+</script>
 
 {% endblock %}
