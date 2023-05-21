@@ -33,9 +33,9 @@ def contact():
     return render_template('contact.html')
 
 
-@home.route('/legal', methods=['GET'])
-def legal():
-    return render_template('legal.html')
+@home.route('/about', methods=['GET'])
+def about():
+    return render_template('about.html')
 
 
 def setup(app):
