@@ -1,71 +1,29 @@
 @import url(colors.css);
 
-#spaceBanner {
-  display: block;
-  width: 100%;
-  height: 95vh;
-  object-fit: cover;
-  object-position: 100% 0%;
+#history {
+  padding: 0 2em 1em 2em;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-#imgcap {
-  padding-bottom: 0%;
-  padding-top: 1%;
-  border-bottom: 1px solid #999999;
+
+#history h2 {
+  margin-top: 1em;
+  color: var(--gd-orange);
 }
-.image_text {
-  font-family: "Kanit", sans-serif;
-  background: rgb(6, 17, 60, 0.8);
-  border-radius: 50px;
-  transform: translateY(-150%);
-}
-.carousel-caption {
-  bottom: 0%;
-}
+
 .lead {
   font-size: 20px;
   font-weight: 200;
 }
-.display-5 {
-  font-size: 25px;
-  font-family: "Kanit", sans-serif;
-  font-weight: bold;
-}
+
 .display-4 {
-  font-family: "Kanit", sans-serif;
   font-weight: bold;
   margin-bottom: 0.5%;
+  color: var(--gd-orange);
 }
-.display-6 {
-  font-weight: bolder;
-  font-size: 25px;
-  padding: 0%;
-  margin: 0.5%;
-}
-#spaceflight_block1 p,
-#spaceflight_block2 p {
-  font-size: 16px;
-}
-#spaceflight_block1 {
-  height: 250px;
-  margin: 2% 0% 2% 0%;
-  background: #eeeeee;
-  color: rgb(6, 17, 60);
-  padding: 5% 1%;
-  border-radius: 50px;
-}
-#spaceflight_block2 {
-  height: 250px;
-  margin: 2% 0% 2% 0%;
-  background: #eeeeee;
-  color: rgb(6, 17, 60);
-  padding: 5% 1%;
-  border-radius: 50px;
-}
-.introText {
-  text-align: center;
-  margin-left: 300px;
-  margin-right: 300px;
-}
+
 .timeline {
   margin: 5em auto;
   max-width: 34.15em;
@@ -80,10 +38,6 @@
   border: 2px solid;
   border-radius: 1em;
   padding: 1em;
-}
-.timeline_year {
-  height: 100%;
-  background-color: var(--gd);
 }
 .checkpoint p {
   line-height: 25px;
@@ -133,42 +87,10 @@
 .checkpoint:nth-child(even) div::before {
   right: -0.5em;
 }
+
 @media screen and (max-width: 1300px) {
   .timeline {
     margin: 2em auto;
-  }
-  #spaceflight_block1 p {
-    font-size: 9px;
-    margin-bottom: 0%;
-  }
-  #spaceflight_block2 p {
-    font-size: 10px;
-    margin-bottom: 0%;
-  }
-  .display-5 {
-    font-size: 18px;
-  }
-  #spaceflight_block1 {
-    height: 250px;
-    width: 100%;
-    margin-bottom: 5%;
-    padding: 2%;
-    border-radius: 20px;
-  }
-  .Odyssey_rounded_image {
-    width: 120px;
-    height: 120px;
-  }
-  .nTime {
-    margin-bottom: 0%;
-    padding-bottom: 0%;
-  }
-  #spaceflight_block2 {
-    height: 260px;
-    width: 100%;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    border-radius: 20px;
   }
   .timeline .checkpoint {
     width: 100%;
@@ -192,27 +114,6 @@
   .timeline .lead {
     font-weight: 200;
     font-size: 14px;
-  }
-  .time #imgcap {
-    padding-bottom: 2%;
-    padding-top: 1%;
-    border-bottom: 1px solid #999999;
-  }
-  .image_text {
-    transform: translateY(-150%);
-  }
-  #spaceBanner {
-    display: block;
-    width: 100%;
-    height: 75vh;
-    object-fit: cover;
-    object-position: 100% 0%;
-  }
-  #index_block1 {
-    margin-top: 50px;
-  }
-  body.light-theme {
-    font-weight: 600px;
   }
   .lead {
     font-size: 14px;
