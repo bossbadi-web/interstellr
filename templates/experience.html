@@ -1,7 +1,5 @@
 {% extends "layouts/layout.html" %} {% block content %}
 
-<link rel="stylesheet" href="/static/css/tour-main-style.css" />
-
 <style>
   #background {
     position: fixed;
@@ -18,6 +16,38 @@
     transform: scaleX(-1);
     z-index: -1;
   }
+  
+  h2 {
+    margin-top: 1em;
+  }
+
+  h3 {
+    margin-top: 1em;
+  }
+
+  .btn {
+    display: block;
+    margin-left: auto;
+
+    color: var(--hot-orange);
+    border-color: var(--hot-orange);
+  }
+  .btn:hover {
+    color: var(--hot-orange);
+    border-color: var(--hot-orange);
+    background-color: var(--cool-blue-lighter);
+  }
+
+  #a-tour {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border-radius: 10px;
+    padding: 2em;
+    border-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(to left, #feca70, #fc924c, #fd401a) 1;
+    background: linear-gradient(135deg, var(--cooler-blue) 0%, var(--cool-blue-lighter) 100%);
+  }
 </style>
 
 <div id="background"></div>
@@ -25,75 +55,199 @@
 <section>
   <div class="container">
     <h1 class="display-1" data-aos="fade-right">experience</h1>
-
     <p>
       We at Interstellr offer you a chance to escape your comfort zone and explore something about which many of us have
-      wondered: space. Through our three tours, we seek to give everyone a chance to finally travel to space in a safe,
+      wondered: space. Through our four tours, we seek to give everyone a chance to finally travel to space in a safe,
       exhilarating, and relatively inexpensive manner.
     </p>
+  </div>
 
-    <h2>The view</h2>
+  <div class="container" id="a-tour" data-aos="fade-up" data-aos-duration="1000">
+    <h2 class="display-3 text-center">Earth tour</h2>
+
+    <h3>The view</h3>
     <p>
-      A beautiful blue and green sphere, with swirling clouds and shimmering land. The sight of city lights at night,
-      the majesty of mountains and deserts, and the vastness of the oceans. That's Earth. Space offers a unique
-      perspective on our planet, highlighting both its beauty and fragility. And now you can experience this yourself.
+      Experience the breathtaking beauty of our blue and green planet, Earth, from the unique perspective of space.
+      Marvel at the swirling clouds, shimmering land, and the mesmerizing sight of city lights at night. Witness the
+      majesty of mountains, deserts, and the vastness of the oceans. Prepare yourself for an unforgettable journey.
     </p>
 
-    <h2>What you get</h2>
+    <h3>What you get</h3>
     <ul>
-      <li>two fully rotating thrusters provide us the ability for precise mobility and dynamic positioning</li>
-      <li>6 hours</li>
-      <li>low G force</li>
-      <li>feel of an astronaut and view of the world</li>
-      <li>8 passengers</li>
+      <li>Two fully rotating thrusters for precise mobility and dynamic positioning.</li>
+      <li>A six-hour immersive experience.</li>
+      <li>Low gravitational force for a comfortable journey.</li>
+      <li>The sensation of being an astronaut, with an incredible view of the world.</li>
+      <li>Accommodation for up to eight passengers.</li>
     </ul>
 
-    <h2>Future plans</h2>
+    <h3>Future plans</h3>
     <ul>
-      <li>test flights are beginning soon this year to verify that we are ready to go commercial</li>
+      <li>Test flights are commencing this year to ensure readiness for commercial operations.</li>
       <li>
-        we plan to keep Space Explorers comfortable in our pressurized SpaceBallon by keeping from using any intense
-        propulsion or G forces
+        Our focus is on ensuring the utmost comfort for Space Explorers by utilizing pressurized SpaceBalloons and
+        avoiding intense propulsion or G-forces.
       </li>
-      <li>we plan to expand to other areas in the world to offer flights with different views</li>
+      <li>
+        We are planning to expand our services to other areas around the world, providing flights with different scenic
+        views.
+      </li>
     </ul>
+
+    <br />
+    <!-- large button -->
+    <a href="/register?tour=earth" class="btn btn-lg">Register now!</a>
   </div>
 
-  <div class="container" id="planetary-tours">
-    <h2 style="text-align: center">Planetary tours coming soon</h2>
-    <div class="row">
-      <!-- card1 -->
-      <div class="card card-circle cSpecial" id="cardSpec2" data-aos="fade-right">
-        <div class="card-body">
-          <h5 class="card-title">Saturn</h5>
-          <p class="card-text">Fly through the rings of Saturn and enjoy views of Saturn's various moons.</p>
-          <a href="/register" class="btn">Register</a>
-        </div>
-      </div>
-      <!-- card2 -->
-      <div class="card card-circle" id="cardSpec">
-        <div class="card-body">
-          <h5 class="card-title">Mars</h5>
-          <p class="card-text">
-            Learn more about the red planet while exploring its potential lifeforms and space settlements from a
-            galactic view.
-          </p>
-          <a href="/register" class="btn">Register</a>
-        </div>
-      </div>
-      <!-- card3 -->
-      <div class="card card-circle" id="cardSpec2" data-aos="fade-left">
-        <div class="card-body">
-          <h5 class="card-title">Jupiter</h5>
-          <p class="card-text">Enjoy the amazing view of Jupiter's red spot and land on one of Jupiter's moons!</p>
-          <a href="/register" class="btn">Register</a>
-        </div>
-      </div>
-    </div>
+  <div class="container" id="a-tour" data-aos="fade-up" data-aos-duration="1000">
+    <h2 class="display-3 text-center">Mars tour</h2>
+
+    <h3>The view</h3>
+    <p>
+      Welcome to the Red Planet, Mars, a world of intrigue, mystery, and potential. Embark on a thrilling expedition to
+      our neighboring planet, where rugged landscapes, ancient canyons, and the possibility of extraterrestrial life
+      await. Prepare to set foot on Mars and experience the thrill of exploring another world.
+    </p>
+
+    <h3>What you get</h3>
+    <ul>
+      <li>
+        Cutting-edge spacecraft designed for interplanetary travel, ensuring a safe and efficient journey to the Red
+        Planet.
+      </li>
+      <li>
+        The opportunity to witness the captivating Martian landscapes firsthand, from vast deserts to towering
+        mountains.
+      </li>
+      <li>
+        An immersive exploration experience spanning two weeks, allowing ample time to delve into the secrets of Mars.
+      </li>
+      <li>Low gravitational force, providing a unique sensation similar to that of Martian gravity.</li>
+      <li>
+        Accompanied by a team of expert scientists and explorers who will guide you through this extraordinary
+        adventure.
+      </li>
+    </ul>
+
+    <h3>Future plans</h3>
+    <ul>
+      <li>
+        Test missions are scheduled in the coming years to verify the readiness and safety of our Mars expedition
+        program.
+      </li>
+      <li>
+        Our spacecraft is equipped with advanced life-support systems, ensuring a comfortable and secure environment for
+        our explorers.
+      </li>
+      <li>
+        We are actively exploring opportunities for long-term colonization efforts and scientific research on Mars.
+      </li>
+    </ul>
+
+    <br />
+    <a href="/register?tour=mars" class="btn btn-lg">Register now!</a>
+  </div>
+
+  <div class="container" id="a-tour" data-aos="fade-up" data-aos-duration="1000">
+    <h2 class="display-3 text-center">Jupiter tour</h2>
+
+    <h3>The view</h3>
+    <p>
+      Welcome to the awe-inspiring realm of Jupiter, the largest planet in our solar system and a majestic giant of
+      swirling storms and breathtaking beauty. Prepare for an extraordinary expedition to this gas giant, where colossal
+      storms, mesmerizing cloud patterns, and a trove of scientific wonders await. Brace yourself for an unforgettable
+      journey to the realm of Jupiter.
+    </p>
+
+    <h3>What you get</h3>
+    <ul>
+      <li>
+        State-of-the-art spacecraft designed for long-duration missions, equipped with advanced propulsion systems for a
+        swift and efficient voyage to the giant planet.
+      </li>
+      <li>
+        A once-in-a-lifetime opportunity to witness the grandeur of Jupiter's iconic Great Red Spot and its
+        ever-changing cloud formations.
+      </li>
+      <li>
+        An immersive exploration experience spanning three weeks, allowing ample time to study Jupiter's diverse moons
+        and unravel the mysteries of its powerful magnetic fields.
+      </li>
+      <li>
+        Low gravitational force, providing a unique experience akin to the sensation of floating weightlessly in
+        Jupiter's immense gravitational pull.
+      </li>
+      <li>
+        Accompanied by a team of distinguished scientists and researchers who will guide you through this extraordinary
+        adventure and share their expertise.
+      </li>
+    </ul>
+
+    <h3>Future plans</h3>
+    <ul>
+      <li>
+        Test missions are currently underway to ensure the safety and readiness of our Jupiter expedition program.
+      </li>
+      <li>
+        Our spacecraft's advanced shielding and navigation systems will protect explorers from Jupiter's harsh radiation
+        belts and help navigate its intricate system of moons.
+      </li>
+      <li>
+        We are actively exploring opportunities for long-term research stations and probes to delve deeper into the
+        mysteries of Jupiter's composition and formation.
+      </li>
+    </ul>
+
+    <br />
+    <a href="/register?tour=jupiter" class="btn btn-lg">Register now!</a>
+  </div>
+
+  <div class="container" id="a-tour" data-aos="fade-up" data-aos-duration="1000">
+    <h2 class="display-3 text-center">Saturn tour</h2>
+
+    <h3>The view</h3>
+    <p>
+      Welcome to the mesmerizing world of Saturn, the sixth planet from the Sun and a celestial wonder that has
+      captivated humanity for centuries. With its iconic rings and mysterious moons, Saturn offers a unique and
+      awe-inspiring experience for space explorers. Prepare to embark on an unforgettable voyage to this magnificent gas
+      giant.
+    </p>
+
+    <h3>What you get</h3>
+    <ul>
+      <li>State-of-the-art spacecraft equipped with advanced propulsion systems for a smooth and efficient journey.</li>
+      <li>A once-in-a-lifetime opportunity to witness the breathtaking beauty of Saturn's rings up close.</li>
+      <li>
+        Six days of immersive exploration, allowing ample time to marvel at the planet's distinctive features and
+        natural wonders.
+      </li>
+      <li>Low gravitational force, providing a comfortable and safe environment for your journey.</li>
+      <li>
+        Expert guides and astronomers who will accompany you throughout the expedition, sharing their knowledge and
+        insights.
+      </li>
+    </ul>
+
+    <h3>Future plans</h3>
+    <ul>
+      <li>
+        Test flights are scheduled to commence within the next year to ensure the safety and readiness of our Saturn
+        visit program.
+      </li>
+      <li>
+        Our spacecraft's advanced technology will ensure a smooth and exhilarating experience, while minimizing any
+        potential impact on Saturn's delicate ecosystem.
+      </li>
+      <li>
+        We are actively exploring opportunities to expand our offerings, such as visits to Saturn's fascinating moons or
+        extended exploration missions.
+      </li>
+    </ul>
+
+    <br />
+    <a href="/register?tour=saturn" class="btn btn-lg">Register now!</a>
   </div>
 </section>
-
-<br />
 
 <script src="/static/js/tour-main-script.js"></script>
 
