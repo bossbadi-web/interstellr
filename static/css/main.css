@@ -75,10 +75,14 @@ section {
 }
 
 h1 {
-  color: yellow;
+  background: linear-gradient(to right, #feca70 0%, #fd401a 40%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   letter-spacing: 0.05em;
   margin-top: 1em;
   margin-bottom: 1em;
+  font-weight: bold !important;
 }
 
 h2 {
