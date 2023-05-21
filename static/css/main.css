@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@200;400&display=swap");
-@import url("colors.css");
+@import url(https://fonts.googleapis.com/css2?family=Anuphan:wght@200;400&display=swap);
+@import url(colors.css);
 
 /* remove scrollbar on page */
 body::-webkit-scrollbar {
@@ -16,7 +16,7 @@ body::-webkit-scrollbar {
 .scroll-progress {
   height: 100%;
   width: 0%;
-  background: linear-gradient(to right, #feca70, #fc924c, #fd401a);
+  background: var(--gd);
 }
 
 html {
@@ -75,7 +75,7 @@ section {
 }
 
 h1 {
-  background: linear-gradient(to right, #feca70 0%, #fd401a 40%);
+  background: var(--gd-yr);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

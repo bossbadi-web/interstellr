@@ -1,3 +1,5 @@
+@import url(colors.css);
+
 #spaceBanner {
   display: block;
   width: 100%;
@@ -81,7 +83,7 @@
 }
 .timeline_year {
   height: 100%;
-  background-color: linear-gradient(to bottom, #feca70, #fc924c, #fd401a);
+  background-color: var(--gd);
 }
 .checkpoint p {
   line-height: 25px;
@@ -116,8 +118,8 @@
 .checkpoint:nth-child(odd) div::before,
 .checkpoint:nth-child(even) div::before {
   content: "";
-  background: #fc924c;
-  box-shadow: 0 0 0.5em #feca70;
+  background: var(--gd-orange);
+  box-shadow: 0 0 0.5em var(--gd-yellow);
   width: 0.8em;
   height: 0.8em;
   position: absolute;

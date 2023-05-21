@@ -8,4 +8,11 @@
   --cool-gray: rgb(200, 200, 200);
   --blurple: #5865F2;
   --dark-blurple: #404ccc;
+
+  --gd-yellow: #feca70;
+  --gd-orange: #fc924c;
+  --gd-red: #fd401a;
+  --gd: linear-gradient(to right, var(--gd-yellow), var(--gd-orange), var(--gd-red));
+  --gd-rev: linear-gradient(to left, var(--gd-yellow), var(--gd-orange), var(--gd-red));
+  --gd-yr: linear-gradient(to right, var(--gd-yellow) 0%, var(--gd-red) 40%);
 }
