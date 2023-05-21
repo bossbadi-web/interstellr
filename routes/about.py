@@ -8,16 +8,6 @@ def contact():
     return render_template('about/contact.html')
 
 
-# @about.route('/our-chapter', methods=['GET'])
-# def our_chapter():
-#     return render_template('about/our-chapter.html')
-
-
-# @about.route('/cte', methods=['GET'])
-# def cte():
-#     return render_template('about/cte.html')
-
-
 @about.route('/legal', methods=['GET'])
 def legal():
     return render_template('about/legal.html')
