@@ -8,19 +8,9 @@ def landing():
     return render_template('landing.html')
 
 
-@home.route('/about', methods=['GET'])
-def about():
-    return render_template('about.html')
-
-
 @home.route('/experience', methods=['GET'])
 def experience():
     return render_template('experience.html')
-
-
-@home.route('/register', methods=['GET'])
-def register():
-    return render_template('register.html', tour=request.args.get('tour'))
 
 
 @home.route('/spaceship', methods=['GET'])
@@ -33,9 +23,19 @@ def training():
     return render_template('training.html')
 
 
-@home.route('/sources', methods=['GET'])
-def sources():
-    return render_template('sources.html')
+@home.route('/register', methods=['GET'])
+def register():
+    return render_template('register.html', tour=request.args.get('tour'))
+
+
+@home.route('/contact', methods=['GET'])
+def contact():
+    return render_template('contact.html')
+
+
+@home.route('/legal', methods=['GET'])
+def legal():
+    return render_template('legal.html')
 
 
 def setup(app):
