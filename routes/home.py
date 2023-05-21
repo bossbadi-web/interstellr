@@ -23,9 +23,9 @@ def training():
     return render_template('training.html')
 
 
-@home.route('/register', methods=['GET'])
-def register():
-    return render_template('register.html', tour=request.args.get('tour'))
+@home.route('/booking', methods=['GET'])
+def booking():
+    return render_template('booking.html', tour=request.args.get('tour'))
 
 
 @home.route('/contact', methods=['GET'])
